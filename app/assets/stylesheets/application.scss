@@ -27,6 +27,7 @@ a:hover {
  */
 html,
 body {
+  font-family: 'Alegreya Sans SC', sans-serif;
   height: 100%;
   background-color: #333;
 }
@@ -36,6 +37,9 @@ body {
   text-shadow: 0 .05rem .1rem rgba(0, 0, 0, .5);
   background: image-url('cover.jpg') no-repeat;
   background-size: cover;
+  h1 {
+    font-family: 'Open Sans', sans-serif;
+  }
 }
 
 /* Extra markup and styles for table-esque vertical and horizontal centering */
@@ -111,6 +115,7 @@ body {
   padding: 0 1.5rem;
 }
 .cover .btn-lg {
+  font-family: 'Open Sans', sans-serif;
   padding: .75rem 1.25rem;
   font-weight: 700;
 }
