@@ -15,44 +15,19 @@
     <div class="container">
 
       <div class="row">
-        <div class="card">
-          <img data-src="holder.js/100px280?theme=thumb" alt="Card image cap">
-          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-        </div>
-        <div class="card">
-          <img data-src="holder.js/100px280?theme=thumb" alt="Card image cap">
-          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-        </div>
-        <div class="card">
-          <img data-src="holder.js/100px280?theme=thumb" alt="Card image cap">
-          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-        </div>
 
-        <div class="card">
-          <img data-src="holder.js/100px280?theme=thumb" alt="Card image cap">
-          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-        </div>
-        <div class="card">
-          <img data-src="holder.js/100px280?theme=thumb" alt="Card image cap">
-          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-        </div>
-        <div class="card">
-          <img data-src="holder.js/100px280?theme=thumb" alt="Card image cap">
-          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-        </div>
-
-        <div class="card">
-          <img data-src="holder.js/100px280?theme=thumb" alt="Card image cap">
-          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-        </div>
-        <div class="card">
-          <img data-src="holder.js/100px280?theme=thumb" alt="Card image cap">
-          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-        </div>
-        <div class="card">
-          <img data-src="holder.js/100px280?theme=thumb" alt="Card image cap">
-          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-        </div>
+        <% if @products %>
+          <% @products.each do |p| %>
+            <div class="col-md-4"%>
+              <div class="card">
+                <%= holder_tag '328x200' %>
+                <h4 class="card-title"><%= p.title.titleize %></h4>
+                <p class="card-text"><%= p.desc %></p>
+              </div> 
+            </div>   
+          <% end %> 
+        <% end %> 
+        
       </div>
 
     </div>
@@ -65,8 +40,8 @@
     <p class="float-right">
       <a href="#">Back to top</a>
     </p>
-    <p>Album example is &copy; Bootstrap, but please download and customize it for yourself!</p>
-    <p>New to Bootstrap? <a href="../../">Visit the homepage</a> or read our <a href="../../getting-started/">getting started guide</a>.</p>
+    <p>&copy; <%= Time.current.year %> Reiter Designs, Born in Castle Rock, CO<br />
+      <small>~ Modern, solid wood decor with a twist of metal ~</small></p>
   </div>
 </footer>
 
