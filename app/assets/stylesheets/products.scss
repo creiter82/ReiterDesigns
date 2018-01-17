@@ -57,6 +57,16 @@ body {
   font-size: 85%;
 }
 
+.product-card {
+  a {
+    color: #868e96;
+    text-decoration: none;
+  }
+  a:hover {
+    color: lighten(#868e96, 20%);
+  }
+}
+
 footer {
   padding-top: 3rem;
   padding-bottom: 3rem;
