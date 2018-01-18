@@ -11,6 +11,7 @@
           <nav class="nav nav-masthead">
             <!-- <a class="nav-link active" href="#">Home</a> -->
             <%= link_to 'Products', products_path, class: 'nav-link' %>
+            <%= link_to 'Contact', '#', class: 'nav-link' %>
           </nav>
         </div>
       </header>
@@ -19,7 +20,7 @@
         <h1 class="cover-heading">Coming Soon!</h1>
         <p class="lead">Stay tuned for the release of our first handmade desk!</p>
         <p class="lead">
-          <a href="#" class="btn btn-lg btn-info">Sneak Peek...</a>
+          <a href="#" class="btn btn-lg btn-cover">Sneak Peek...</a>
         </p>
       </main>
 
@@ -27,7 +28,7 @@
 
       <footer class="mastfoot">
         <div class="inner">
-          <p style="color:#fff;">&copy; <%= Time.current.year %> Reiter Designs, Born in Castle Rock, CO<br />
+          <p>&copy; <%= Time.current.year %> Reiter Designs, Born in Castle Rock, CO<br />
             <small>~ Modern, solid wood decor &amp; furniture with a twist of metal ~</small></p>
         </div>
       </footer>

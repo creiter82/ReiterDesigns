@@ -1,6 +1,15 @@
-<h1>Editing Product</h1>
+<div class="container">
+  <div class="row">  
+    <div class="col-md-6 offset-md-3">   
+      <div class="card new-product-card">         
 
-<%= render 'form', product: @product %>
+        <h1 class="card-title">Editing Product</h1>
 
-<%= link_to 'Show', @product %> |
-<%= link_to 'Back', products_path %>
+        <%= render 'form', product: @product %>
+
+        <p><%= link_to 'Show', @product %> | <%= link_to 'Back', products_path %></p>
+
+      </div>
+    </div>
+  </div>
+</div>        

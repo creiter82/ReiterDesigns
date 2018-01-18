@@ -48,7 +48,7 @@ body {
   width: 100%;
   padding: .75rem;
   margin-bottom: 2rem;
-  border: 0;
+  // border: 0;
 }
 
 .card > img {
@@ -64,6 +64,7 @@ body {
 }
 
 .product-card {
+  border: none;
   a {
     color: #868e96;
     text-decoration: none;
@@ -71,6 +72,10 @@ body {
   a:hover {
     color: lighten(#868e96, 20%);
   }
+}
+
+.new-product-card {
+  margin-top: 20px;
 }
 
 footer {

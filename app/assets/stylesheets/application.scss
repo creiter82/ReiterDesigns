@@ -4,6 +4,8 @@
  * Globals
  */
 
+ $dark-gray: #737371;
+
 /* Links */
 a,
 a:focus,
@@ -30,13 +32,13 @@ body {
   font-family: 'Alegreya Sans SC', sans-serif;
   font-weight: 100;
   height: 100%;
-  background-color: #333;
+  // background-color: #333;
 }
 body {
   color: #fff;
   text-align: center;
   text-shadow: 0 .05rem .1rem rgba(0, 0, 0, .5);
-  background: image-url('cover.jpg') no-repeat;
+  background: image-url('wood.jpg') no-repeat; // cover.jpg
   background-size: cover;
   h1 {
     font-family: 'Open Sans', sans-serif;
@@ -81,9 +83,10 @@ body {
   padding: 2rem 0 0 0; //.25rem instead of 2
   // font-weight: 700;
   // color: rgba(255, 255, 255, .5);
-  color: #fff;
-  font-size: 20px;
-  text-shadow: 0 .1rem .1rem rgba(0, 0, 0, .7);
+  color: $dark-gray; //#fff
+  font-size: 22px; // 20px
+  text-shadow: none;
+  // text-shadow: 0 .1rem .1rem rgba(0, 0, 0, .7)
   background-color: transparent;
   border-bottom: .25rem solid transparent;
 }
@@ -91,7 +94,8 @@ body {
 .nav-masthead .nav-link:hover,
 .nav-masthead .nav-link:focus {
   // border-bottom-color: rgba(255, 255, 255, .25);
-  border-bottom-color: #fff;
+  color: lighten($dark-gray, 20%);
+  border-bottom-color: lighten($dark-gray, 20%);
 }
 
 .nav-masthead .nav-link + .nav-link {
@@ -118,6 +122,11 @@ body {
  */
 .cover {
   padding: 0 1.5rem;
+  color: $dark-gray; 
+  text-shadow: none;
+  h1 {
+    font-size: 50px;
+  }
 }
 .cover .btn-lg {
   font-family: 'Open Sans', sans-serif;
@@ -125,9 +134,21 @@ body {
   font-weight: 700;
 }
 
+.btn-cover {
+  background: image-url('btn-bg-2.jpg')!important;
+  background-size: contain;
+  background-color: transparent;
+  border-color: transparent;
+  &:hover, &:focus, &:active {
+    color: darken(white, 10%);
+    box-shadow: inset 0px 0px 26px rgba(0,0,0,0.9);
+    background-color: transparent;
+  }
+}
+
 .cover-bg {
   padding: 2rem;
-  background: rgba(0, 0, 0, 0.3);
+  background: rgba(255, 255, 255, 0.3);// .3
   border-radius: 5px;
 }
 
@@ -136,7 +157,13 @@ body {
  * Footer
  */
 .mastfoot {
-  color: rgba(255, 255, 255, .5);
+  // color: rgba(255, 255, 255, .5); if uncomment remove all below
+  .inner {
+    p {
+      color: black;
+      text-shadow: none;
+    }
+  }  
 }
 
 

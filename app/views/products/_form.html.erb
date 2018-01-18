@@ -11,22 +11,22 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="form-group">
     <%= f.label :title %>
-    <%= f.text_field :title %>
+    <%= f.text_field :title, autofocus: true, class: 'form-control' %>  
   </div>
 
-  <div class="field">
-    <%= f.label :desc %>
-    <%= f.text_area :desc %>
+  <div class="form-group">
+    <%= f.label :desc, 'Description' %>
+    <%= f.text_area :desc, rows: 6,class: 'form-control' %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= f.label :price %>
-    <%= f.text_field :price %>
+    <%= f.text_field :price, class: 'form-control col-2' %>
   </div>
 
-  <div class="actions">
-    <%= f.submit %>
+  <div class="form-group">
+    <%= f.submit 'Create Product', class: 'btn btn-primary' %>
   </div>
 <% end %>
