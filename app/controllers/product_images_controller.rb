@@ -30,7 +30,7 @@ class ProductImagesController < ApplicationController
 
     respond_to do |format|
       if @product_image.save
-        format.html { redirect_to @product_image, notice: 'Product image was successfully created.' }
+        format.html { redirect_to product_path(@product_image.product.id), notice: 'Product image was successfully created.' }
         format.json { render :show, status: :created, location: @product_image }
       else
         format.html { render :new }

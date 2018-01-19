@@ -32,12 +32,18 @@
   </div>
 
   <div class="form-group row"> 
-    <div class="custom-file col">
+    <!-- <div class="custom-file col">
       <div class="col">
-        <%= f.text_field :image, class: 'custom-file-input' %>
-        <%= f.label :image, 'Choose file', class: 'custom-file-label' %>
+        <%#= f.text_field :image, class: 'custom-file-input' %>
+        <%#= f.label :image, 'Choose file', class: 'custom-file-label' %>
       </div>  
-    </div>
+    </div> -->
+
+    <div class="col">
+      <label class="btn btn-primary">
+        Upload a image <%= f.file_field :image, style: 'display:none;' %>
+      </label>
+    </div>  
 
     <div class="custom-control custom-checkbox col">
       <%= f.check_box :featured, class: 'custom-control-input' %>

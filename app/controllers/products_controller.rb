@@ -11,6 +11,7 @@ class ProductsController < ApplicationController
   # GET /products/1
   # GET /products/1.json
   def show
+    @featured = @product.product_images.find_by(featured: true)
   end
 
   # GET /products/new
