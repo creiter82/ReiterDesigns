@@ -1,6 +1,8 @@
 class ProductImagesController < ApplicationController
   before_action :set_product_image, only: [:show, :edit, :update, :destroy]
 
+  layout 'product'
+
   # GET /product_images
   # GET /product_images.json
   def index
@@ -69,6 +71,6 @@ class ProductImagesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def product_image_params
-      params.require(:product_image).permit(:product_id, :title, :image, :featured)
+      params.require(:product_image).permit(:product_id, :title, :image, :featured, :product_id)
     end
 end
