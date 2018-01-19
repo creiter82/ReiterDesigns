@@ -1,11 +1,13 @@
 <div class="container">  
   <p id="notice"><%= notice %></p>
 
-  <div class="row">
-      <div class="col-md-6">
-        <p><%= image_tag(@featured.image, width: '100%') %></p>
-      </div>  
-  </div> 
+  <% if @featured %>  
+    <div class="row">
+        <div class="col-md-6">
+          <p><%= image_tag(@featured.image, width: '100%') %></p>
+        </div>  
+    </div> 
+  <% end %>  
 
   <div class="row">
     <% @product.product_images.each do |p| %>
