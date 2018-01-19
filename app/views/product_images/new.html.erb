@@ -1,5 +1,15 @@
-<h1>New Product Image</h1>
+<div class="container"> 
+  <div class="row">  
+    <div class="col-md-6 offset-md-3">   
+      <div class="card new-product-card">             
 
-<%= render 'form', product_image: @product_image %>
+        <h1 class="card-title">New Product Image</h1>
 
-<%= link_to 'Back', product_images_path %>
+        <%= render 'form', product_image: @product_image %>
+
+        <%= link_to 'Back', product_images_path %>
+
+      </div>
+    </div>
+  </div>    
+</div>            
