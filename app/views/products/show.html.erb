@@ -1,36 +1,28 @@
-<div class="container">  
+<div class="container product-container">  
   <p id="notice"><%= notice %></p>
 
-  <% if @featured %>  
-    <div class="row">
-        <div class="col-md-6">
-          <p><%= image_tag(@featured.image, width: '100%') %></p>
-        </div>  
-    </div> 
-  <% end %>  
-
+    
   <div class="row">
-    <% @product.product_images.each do |p| %>
+      <div class="col-md-6">
+        <% if @featured %>
+          <p><%= image_tag(@featured.image, width: '100%') %></p> 
+        <% end %>
+      </div> 
+      <div class="col-md-2">
+        <%# @product.product_images.each do |p| %>
+        <% @images.each do |img| %>
+          <div class="col">
+            <p><%= image_tag(img.image, width: '100%') %></p>
+          </div>  
+        <% end %>
+      </div>
       <div class="col-md-4">
-        <p><%= image_tag(p.image, width: '100%') %></p>
-      </div>  
-    <% end %>
-  </div>  
-
-  <p>
-    <strong>Title:</strong>
-    <%= @product.title %>
-  </p>
-
-  <p>
-    <strong>Description:</strong>
-    <%= @product.desc %>
-  </p>
-
-  <p>
-    <strong>Price:</strong>
-    <%= @product.price %>
-  </p>
+        <h1 class="text-center"><%= @product.title %></h1>
+        <p><%= @product.desc %></p>
+        <p>$<%= @product.price %></p>
+        <p><%= link_to 'Add image', new_product_image_path, class: 'btn btn-outline-primary' %>
+      </div>   
+  </div> 
 
   <%= link_to 'Edit', edit_product_path(@product) %> |
   <%= link_to 'Back', products_path %>

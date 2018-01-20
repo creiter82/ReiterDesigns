@@ -12,6 +12,7 @@ class ProductsController < ApplicationController
   # GET /products/1.json
   def show
     @featured = @product.product_images.find_by(featured: true)
+    @images = @product.product_images.where(featured: false)
   end
 
   # GET /products/new
@@ -31,7 +32,7 @@ class ProductsController < ApplicationController
     respond_to do |format|
       if @product.save
         format.html { redirect_to @product, notice: 'Product was successfully created.' }
-        format.json { render :show, status: :created, location: @product }
+        format.json { render :new, status: :created, location: @product }
       else
         format.html { render :new }
         format.json { render json: @product.errors, status: :unprocessable_entity }
