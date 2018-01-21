@@ -12,9 +12,9 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require lightbox
 //= require turbolinks
 //= require popper
 //= require bootstrap
 //= require holder
-//= require lightbox
 //= require_tree .
