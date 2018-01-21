@@ -20,7 +20,7 @@
         <h1 class="cover-heading">Coming Soon!</h1>
         <p class="lead">Stay tuned for the release of our first handmade desk!</p>
         <p class="lead">
-          <a href="#" class="btn btn-lg btn-cover">Sneak Peek...</a>
+          <%= link_to 'Sneek Peek...', @product.product_images.first.image.url, "data-lightbox": @product.product_images, class: 'btn btn-lg btn-cover' %>
         </p>
       </main>
 
