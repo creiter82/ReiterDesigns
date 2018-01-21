@@ -5,14 +5,14 @@
   <div class="row">
       <div class="col-md-6">
         <% if @featured %>
-          <p><%= link_to image_tag(@featured.image.url, width: '100%'), @featured.image.url, "data-lightbox" => @product.product_images %></p> 
+          <p><%= link_to image_tag(@featured.image.url, width: '100%'), @featured.image.url, "data-lightbox": @product.product_images %></p> 
         <% end %>
       </div> 
       <div class="col-md-2">
         <%# @product.product_images.each do |p| %>
         <% @images.each do |img| %>
           <div class="col">
-            <p><%= link_to image_tag(img.image.url, width: '100%'), img.image.url, "data-lightbox" => @product.product_images %></p>
+            <p><%= link_to image_tag(img.image.url, width: '100%'), img.image.url, "data-lightbox": @product.product_images %></p>
           </div>  
         <% end %>
       </div>
