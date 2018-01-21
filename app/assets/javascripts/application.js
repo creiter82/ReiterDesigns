@@ -16,4 +16,5 @@
 //= require popper
 //= require bootstrap
 //= require holder
+//= require lightbox
 //= require_tree .
