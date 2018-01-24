@@ -16,6 +16,12 @@
         </div>
       </header>
 
+      <% flash.each do |key, value| %>
+        <div class="<%= flash_class(key) %>">
+          <%= value %>
+        </div>
+      <% end %>
+
       <main role="main" class="inner cover cover-bg">
         <h1 class="cover-heading">Coming Soon!</h1>
         <p class="lead">Stay tuned for the release of our first handmade desk!</p>

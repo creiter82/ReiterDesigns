@@ -40,6 +40,12 @@
       </div>
     </header>
 
+    <% flash.each do |key, value| %>
+      <div class="<%= flash_class(key) %>">
+        <%= value %>
+      </div>
+    <% end %>
+
     <%= yield %>
 
     <footer class="text-muted">
@@ -51,6 +57,6 @@
           <small>~ Modern, solid wood decor &amp; furniture with a twist of metal ~</small></p>
       </div>
     </footer>
-  </body>
   <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </body>
 </html>

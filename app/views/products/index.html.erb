@@ -23,7 +23,7 @@
                 <%= link_to holder_tag('328x200'), product_path(p) %>
                 <div class="card-body">
                   <h4 class="card-title"><%= link_to p.title.titleize, product_path(p) %></h4>
-                  <p class="card-text"><%= p.desc %></p>
+                  <p class="card-text"><%= p.desc.capitalize %></p>
                   <p class="card-text"><%= p.price %></p>
                   <p class="card-text"><%= link_to 'Delete', product_path(p), method: :delete, data: { confirm: "Are you sure you want to delete \'#{p.title.titleize}\'?" }, class: 'btn btn-sm btn-danger' %></p>
                 </div>  

@@ -1,6 +1,4 @@
-<div class="container product-container">  
-  <p id="notice"><%= notice %></p>
-
+<div class="container product-container"> 
     
   <div class="row">
       <div class="col-md-6">
@@ -17,8 +15,8 @@
         <% end %>
       </div>
       <div class="col-md-4">
-        <h1 class="text-center"><%= @product.title %></h1>
-        <p><%= @product.desc %></p>
+        <h1"><%= @product.title %></h1>
+        <p><%= @product.desc.capitalize %></p>
         <p>$<%= @product.price %></p>
         <p><%= link_to 'Add image', new_product_image_path, class: 'btn btn-outline-primary' %>
       </div>   
