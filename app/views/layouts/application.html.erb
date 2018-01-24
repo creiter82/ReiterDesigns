@@ -10,9 +10,29 @@
   </head>
 
   <body>
-    
-    <%= yield %>
 
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <div class="site-wrapper">
+
+      <div class="site-wrapper-inner">
+
+        <div class="cover-container">
+
+          <%= render 'shared/application_nav' %>
+
+          <%= render 'shared/flash' %>
+    
+          <%= yield %>
+
+          <%= render 'shared/application_footer' %>
+
+        </div>
+
+      </div>
+
+    </div>  
+
+    <%= render 'shared/mail_chimp' %>
+
+    <%= render 'shared/turbolinks' %>
   </body>
 </html>
