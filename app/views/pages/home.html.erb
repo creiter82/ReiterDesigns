@@ -20,7 +20,14 @@
         <h1 class="cover-heading">Coming Soon!</h1>
         <p class="lead">Stay tuned for the release of our first handmade desk!</p>
         <p class="lead">
-          <%= link_to 'Sneek Peek...', @product.product_images.first.image.url, "data-lightbox": @product.product_images, class: 'btn btn-lg btn-cover' %>
+          <%= link_to 'Sneek Peek...', @featured.image.url, "data-lightbox" => @product.product_images, class: 'btn btn-lg btn-cover' %>
+
+          <% @images.each do |img| %>
+            <div class="col d-none">
+              <p><%= link_to image_tag(img.image.url, width: '100%'), img.image.url, "data-lightbox": @product.product_images %></p>
+            </div>  
+          <% end %>
+
         </p>
       </main>
 
