@@ -20,7 +20,11 @@
           <% @products.each do |p| %>
             <div class="col-md-4"%>
               <div class="card product-card">
-                <%= link_to holder_tag('328x200'), product_path(p) %>
+                <% if p.product_images.empty? %>
+                  <%= link_to holder_tag('328x200'), product_path(p) %>
+                <% else %>
+                  <%= image_tag p.product_images.first.image, width: '100%' %> 
+                <% end %>   
                 <div class="card-body">
                   <h4 class="card-title"><%= link_to p.title.titleize, product_path(p) %></h4>
                   <p class="card-text"><%= p.desc.capitalize %></p>
