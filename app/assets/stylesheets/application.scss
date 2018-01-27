@@ -7,11 +7,18 @@
 
  $dark-gray: #737371;
 
+ .alert {
+  text-shadow: none;
+ }
+
 /* Links */
-a,
+a {
+  color: $dark-gray;
+}
 a:focus,
 a:hover {
-  color: #fff;
+  color: lighten($dark-gray, 30%);
+  text-decoration: none;
 }
 
 /* Custom default button */
@@ -103,6 +110,28 @@ body {
   margin-left: 1rem;
 }
 
+.nav-auth-links {
+  margin-left: 1rem;
+  padding: 2rem 0 0 0;
+  font-size: 22px;
+  text-shadow: none;
+  background-color: transparent;
+  border-bottom: .25rem solid transparent;
+}
+
+.nav-masthead .nav-auth-links:hover,
+.nav-masthead .nav-auth-links:focus {
+  color: lighten($dark-gray, 20%);
+  border-bottom-color: lighten($dark-gray, 20%);
+}
+
+.nav-login {
+  color: $dark-gray;
+}
+.nav-logout {
+  color: red;
+}
+
 .nav-masthead .active {
   color: #fff;
   border-bottom-color: #fff;
@@ -136,6 +165,7 @@ body {
 }
 
 .btn-cover {
+  color: #fff;
   background: image-url('btn-bg-2.jpg')!important;
   background-size: contain;
   background-color: transparent;
@@ -152,6 +182,26 @@ body {
   background: rgba(255, 255, 255, 0.3);// .3
   border-radius: 5px;
 }
+
+/*
+ * Devise
+ */
+ .card-body {
+   color: $dark-gray;
+   text-align: left;
+   text-shadow: none;
+ }
+
+ .auth-links {
+   text-shadow: none;
+   font-weight: 300;
+ } 
+
+ .login > .card {
+   width: 22rem;
+   margin: 0 auto;
+   float: none;
+ }
 
 
 /*
