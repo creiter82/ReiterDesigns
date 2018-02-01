@@ -13,7 +13,9 @@
 
     <%= render 'shared/product_nav' %>
 
-    <%= render 'shared/flash' %>
+    <% unless current_page?('/products') %>
+      <%= render 'shared/flash' %>
+    <% end %>  
 
     <%= yield %>
 

@@ -1,11 +1,14 @@
 class ProductsController < ApplicationController
   before_action :set_product, only: [:show, :edit, :update, :destroy]
+
   layout 'product'
+
+  access admin: :all, message: "Not authorized"
 
   # GET /products
   # GET /products.json
   def index
-    @products = Product.order(updated_at: :desc)
+      @products = Product.order(updated_at: :desc)
   end
 
   # GET /products/1

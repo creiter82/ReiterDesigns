@@ -1,8 +1,15 @@
 <% flash.each do |key, value| %>
-  <div class="<%= flash_class(key) %> alert-dismissible fade show" role="alert">
+
+  <% if key == "notice" %>
+    <div class="alert alert-success">
+  <% elsif key == "alert" %>
+    <div class="alert alert-danger">
+  <% else %>
+    <div class="<%= flash_class(key) %> alert-dismissible fade show" role="alert">
+  <% end %>    
     <%= value %>
-    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-  </div>
+      <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    </div>
 <% end %>
 
 <!-- <%# if alert %> -->
