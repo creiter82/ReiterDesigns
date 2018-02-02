@@ -4,6 +4,8 @@
     <div class="alert alert-success">
   <% elsif key == "alert" %>
     <div class="alert alert-danger">
+  <% elsif key == "timedout" %>
+    <div class="invisible">
   <% else %>
     <div class="<%= flash_class(key) %> alert-dismissible fade show" role="alert">
   <% end %>    
