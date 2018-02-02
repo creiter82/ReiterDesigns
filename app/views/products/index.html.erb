@@ -5,7 +5,7 @@
       <h1 class="jumbotron-heading">Products Available</h1>
       <p class="lead text-muted">No veneer here!  All our furniture and decor is made of solid wood.  That means no MDF, particle board, plywood, or any other things you can think of that are not solid wood.</p>
       <p>
-        <%= link_to 'New Product', new_product_path, class: 'btn btn-primary' %>
+        <%= link_to 'New Product', new_product_path, class: 'btn btn-primary' if logged_in?(:admin) %>
         <a href="#" class="btn btn-secondary">Secondary action</a>
       </p>
     </div>
